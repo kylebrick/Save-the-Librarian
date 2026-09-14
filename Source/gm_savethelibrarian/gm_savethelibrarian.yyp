@@ -9,7 +9,9 @@
     "name":"Default",
   },
   "defaultScriptType":1,
-  "Folders":[],
+  "Folders":[
+    {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
@@ -19,12 +21,15 @@
   },
   "name":"gm_savethelibrarian",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_000_testing","path":"rooms/rm_000_testing/rm_000_testing.yy",},},
+    {"id":{"name":"spr_test_logo","path":"sprites/spr_test_logo/spr_test_logo.yy",},},
+    {"id":{"name":"spr_test_player","path":"sprites/spr_test_player/spr_test_player.yy",},},
+    {"id":{"name":"spr_test_portrait","path":"sprites/spr_test_portrait/spr_test_portrait.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_000_testing","path":"rooms/rm_000_testing/rm_000_testing.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
