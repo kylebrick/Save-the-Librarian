@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_MACRO",
-    "path":"sprites/spr_MACRO/spr_MACRO.yy",
+    "name":"spr_macro",
+    "path":"sprites/spr_macro/spr_macro.yy",
   },
   "spriteMaskId":null,
   "visible":true,

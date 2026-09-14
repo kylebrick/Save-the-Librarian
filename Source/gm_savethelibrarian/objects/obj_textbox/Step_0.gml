@@ -1,5 +1,6 @@
 /// @desc Flip Through Pages
 
+/*
 if(keyboard_check_pressed(key_interact)) || (gamepad_button_check_pressed(0,gp_face1)) || (mouse_check_button_pressed(mb_left))
 {
 	if(!choice_dialogue) && (counter < str_len) {counter = str_len;}
@@ -24,7 +25,7 @@ if(keyboard_check_pressed(key_interact)) || (gamepad_button_check_pressed(0,gp_f
 	{
 		if(instance_exists(obj_cutscene)) //continue cutscene if it exists
 		{
-			with(obj_cutscene) {scr_cutscene_end_action();}
+			//with(obj_cutscene) {scr_cutscene_end_action();}
 		}
 		else
 		//{with(par_player) {alarm[0] = 4};} //return player control

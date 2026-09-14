@@ -43,7 +43,7 @@
     ],
     "top":5,
   },
-  "origin":0,
+  "origin":6,
   "parent":{
     "name":"_Macro",
     "path":"folders/Sprites/_Macro.yy",
@@ -70,7 +70,7 @@
     "eventStubScript":null,
     "eventToFunction":{},
     "length":1.0,
-    "lockOrigin":false,
+    "lockOrigin":true,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
       "Keyframes":[],
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":12,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

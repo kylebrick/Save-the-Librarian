@@ -1,4 +1,6 @@
 /// @desc Organize Text
+
+/*
 voice = voices[page];
 portrait = portraits[page];
 portrait_index = portrait_indexes[page];

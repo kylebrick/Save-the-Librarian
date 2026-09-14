@@ -1,6 +1,7 @@
 /// @desc  Execute Script
 //[scrip, arg0, arg1...]
 
+/*
 if(is_array(scripts))
 {	
 	var pagescript = scripts[page];	
@@ -14,7 +15,7 @@ if(is_array(scripts))
 		{
 			var args = array_create(len-1,0);
 			array_copy(args,0,pagescript,1,len-1);
-			scr_script_execute_alt(pagescript[0],args);
+			//scr_script_execute_alt(pagescript[0],args);
 		}
 	}
 }

@@ -10,8 +10,8 @@
   "name":"obj_cursor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cursor",
-    "path":"folders/Objects/Cursor.yy",
+    "name":"UI",
+    "path":"folders/Objects/UI.yy",
   },
   "parentObjectId":null,
   "persistent":false,

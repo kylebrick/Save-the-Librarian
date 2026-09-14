@@ -1,5 +1,8 @@
 /// @desc Draw Textbox & Text
 
+event_inherited();
+
+/*
 //update variables if lucy is above or below screen threshold
 var g_x = camera_get_view_x(view_camera[0]) + global.game_width/2;
 var g_y = camera_get_view_y(view_camera[0]);
@@ -21,8 +24,8 @@ else if(portrait != spr_portrait_detective)	//other
 	if(portrait_alpha_player >= 1)	{portrait_alpha_player = 0;}
 	_p_x = box_x + box_w*0.8; _p_y = box_y + 8;
 	draw_sprite_ext(portrait,portrait_index,_p_x,_p_y,1,1,0,c_white,portrait_alpha_other);
-}*/
-if(portrait == spr_portrait_empty) //empty
+}
+if(portrait == spr_test_portrait) //empty
 {
 	//_p_x = -44; _p_y = -44;
 	//draw_sprite(portrait,portrait_index,_p_x,_p_y);	

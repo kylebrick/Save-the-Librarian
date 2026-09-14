@@ -13,7 +13,7 @@ box_alpha				= 0;
 box_alpha_speed			= 0.144;
 
 //portrait
-portrait				= spr_portrait_empty;
+portrait				= spr_test_portrait;
 portrait_index			= 0;
 portrait_alpha_player	= 0;
 portrait_alpha_other	= 0;
@@ -39,7 +39,10 @@ draw_set_font(font);
 
 page					= 0; 
 text[0]					= "";
-voice					= snd_fx_msg;
+voice					= sfx_msg;
+
+str_len					= 0;
+text_wrapped			= true;
 
 //misc.
 choice					= 0;
