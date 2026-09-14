@@ -6,7 +6,6 @@ function scr_debug_msg(_number){
 		"schlowie wowie",
 		"*bug noises*",
 		"hiss",
-		"fuck you, Kyle.",
 		"i'll work when I feel like it.",
 		"golly gee willickers"
 	];	
