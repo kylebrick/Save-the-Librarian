@@ -1,9 +1,9 @@
 ///@desc Change Direction
 
-var _key_up		= keyboard_check(vk_up		);
-var _key_down	= keyboard_check(vk_down	);
-var _key_left	= keyboard_check(vk_left	);
-var _key_right	= keyboard_check(vk_right	);
+var _key_up		= keyboard_check(vk_up		) || keyboard_check(ord("W"));
+var _key_down	= keyboard_check(vk_down	) || keyboard_check(ord("S"));
+var _key_left	= keyboard_check(vk_left	) || keyboard_check(ord("A"));
+var _key_right	= keyboard_check(vk_right	) || keyboard_check(ord("D"));
 
 if		(_key_up)		image_index = 0;
 else if	(_key_down)		image_index = 1;

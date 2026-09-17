@@ -1,54 +1,60 @@
 /// @desc Init
 
-//textbox
-box						= spr_textbox;
+//Box
+#region
+
+box_x					= 0;
+box_y					= 0;
 box_w					= 120;
 box_h					= 40;
-box_spr_w				= sprite_get_width(box);
-box_spr_h				= sprite_get_height(box);
-box_x					= ((global.game_width*2) - box_w) * 0.5;
-box_y					= ((global.game_height*2)*0.99) - box_h;
-box_threshold			= 100;
+box_spr					= spr_textbox;
+box_spr_w				= sprite_get_width (box_spr);
+box_spr_h				= sprite_get_height(box_spr);
 box_alpha				= 0;
-box_alpha_speed			= 0.144;
+box_alpha_spd			= 0.144;
 
-//portrait
-portrait				= spr_test_portrait;
-portrait_index			= 0;
-portrait_alpha_player	= 0;
-portrait_alpha_other	= 0;
-portrait_alpha_speed	= box_alpha_speed;
-port_w					= sprite_get_width(portrait);
-port_h					= sprite_get_height(portrait);
-port_x					= box_x + 4;
-port_y					= box_y + 2;
+#endregion
 
-//text
-x_buffer				= 8;
-y_buffer				= 4;
-text_x					= box_x + x_buffer;
-text_y					= box_y + y_buffer;
-text_max_w				= box_w - x_buffer - 4;
-text_height				= string_height("M");
+//Text
+#region
+
+x_buff					= 8;
+y_buff					= 4;
+txt_x					= box_x+x_buff;
+txt_y					= box_y+y_buff;
+txt_w					= box_w-x_buff-4;
+txt_h					= string_height("M");
+txt_wrap				= "";
+txt_spd					= 1;
+str_len					= 0;
+
+#endregion
+
+//Character
+#region
+
+char					= undefined;
+	//font
+	//voice
+	//portr
+
+#endregion			
+
+//Misc.
+#region
 
 counter					= 0;
-text_speed				= 1;
-text_col				= c_white;
-font					= global.font_main;
-draw_set_font(font);
-
-page					= 0; 
-text[0]					= "";
-voice					= sfx_msg;
-
-str_len					= 0;
-text_wrapped			= true;
-
-//misc.
-choice					= 0;
-choice_offset			= 4;
-choice_col				= c_fuchsia;
-choice_dialogue			= false;
 pause					= false;
+pause_time_comma		= 14;
+pause_time_period		= 0;
+pause_time_exclaim		= 24;
+pause_time_question		= 0;
 key_interact			= ord("Z");
-//scr_player_control(false,false,false);
+function line_set(_char,_txt) {
+	char		= _char;
+	txt_wrap	= scr_string_wrap(_txt,txt_w);
+	str_len		= string_length(txt_wrap);
+	counter		= 0;
+}
+	
+#endregion

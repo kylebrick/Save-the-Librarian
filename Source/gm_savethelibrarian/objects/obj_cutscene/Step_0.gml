@@ -1,3 +1,11 @@
-/// @desc Get Cutscene to Run
+/// @desc Update Queue
 
-//scr_script_execute_alt(current_scene[0],current_scene_array);
+if(queue_ind >= array_length(queue)) {instance_destroy(); exit;}
+
+if(!action_init) {
+	action_cur = queue[queue_ind];
+	action_cur.start();
+	action_init = true;
+}
+
+if(action_cur.is_finished) {queue_ind++; action_init = false;}

@@ -22,8 +22,8 @@ function scr_macro_suite() {
 		
 		//Vars
 		#region
-		var _obj	= _macro_arr[_i,0];
-		var _spawn	= _macro_arr[_i,1];
+		var _obj	= _macro_arr[_i][0];
+		var _spawn	= _macro_arr[_i][1];
 		var _width	= _macro_spr_width;
 		var _offset = _macro_pos_offset;
 		var _lay_id = _macro_lay_id;
@@ -38,7 +38,7 @@ function scr_macro_suite() {
 	}
 
 	//Spawn Misc. Objects
-	if(!instance_exists(obj_grid))		instance_create_layer(room_width-12,y,_macro_lay_id,obj_grid	);
-	if(!instance_exists(obj_cutscene))	instance_create_layer(room_width-24,y,_macro_lay_id,obj_cutscene);
-	if(!instance_exists(obj_textbox))	instance_create_layer(room_width-36,y,_macro_lay_id,obj_textbox );
+	if(!instance_exists(obj_grid))			instance_create_layer(room_width-12,y,_macro_lay_id,obj_grid	);
+	//if(!instance_exists(obj_cutscene))	instance_create_layer(room_width-24,y,_macro_lay_id,obj_cutscene);
+	//if(!instance_exists(obj_textbox))		instance_create_layer(room_width-36,y,_macro_lay_id,obj_textbox );
 }

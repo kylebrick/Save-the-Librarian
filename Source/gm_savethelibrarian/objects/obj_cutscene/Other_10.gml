@@ -1,5 +1,6 @@
-/// @desc Update to Scene Array Size
+///@desc Update to Scene Array Size
  
+ /*
 current_scene = scene_info[scene];
 
 var len = array_length(current_scene) - 1; //don't include first entry of scene array

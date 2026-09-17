@@ -7,3 +7,5 @@ x		= x_pos;
 y_to	= mouse_y;
 y_pos	= lerp(y_pos,y_to,move_spd);
 y		= y_pos;
+
+if(mouse_check_button_pressed(mb_left)) instance_create_depth(x,y,depth,obj_position_marker);
