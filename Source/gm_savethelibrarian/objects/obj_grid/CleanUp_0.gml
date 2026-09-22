@@ -1,3 +1,4 @@
-/// @desc Font
+///@desc Destroy Grid
 
-if(font_exists(global.font_main)) font_delete(global.font_main);
+ds_grid_destroy(grid	);
+mp_grid_destroy(mp_grid	);

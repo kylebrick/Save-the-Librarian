@@ -1,12 +1,20 @@
-/// @desc Global Vars
+///@desc Init
 
-global.game_spd		= game_get_speed(gamespeed_fps);
-global.game_width	= 256;
-global.game_height	= 144;
+//Grid
+grid_w		= room_width  div global.grid_size;
+grid_h		= room_height div global.grid_size;
+grid		= ds_grid_create(grid_w,grid_h);
+			  ds_grid_clear (grid,0);
 
-global.font_main = font_add_sprite(fnt_main,32,true,1);
-display_set_gui_size(global.game_width,global.game_height);
-window_set_cursor(cr_none);
+//Map & Collision
+with(obj_col) {
+	var _gx = x div global.grid_size;
+	var _gy = y div global.grid_size;
+	ds_grid_set(other.grid,_gx,_gy,1);
+}
+mp_grid =	mp_grid_create(0,0,grid_w,grid_h,global.grid_size,global.grid_size);
+			//mp_grid_add_instances(mp_grid,obj_col,false);
 
-scr_macro_suite();
-randomise();
+//Hover
+hover_grid_x = -1;
+hover_grid_y = -1;

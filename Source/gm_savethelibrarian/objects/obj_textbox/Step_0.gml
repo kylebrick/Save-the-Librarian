@@ -1,4 +1,4 @@
-/// @desc Type & Update Text
+///@desc Type & Update Text
 
 if(char == undefined) exit;
 
@@ -17,5 +17,8 @@ if	(keyboard_check_pressed(key_interact)		||
 	(gamepad_button_check_pressed(0,gp_face1))	||
 	(mouse_check_button_pressed(mb_left))) {
 		if(counter < str_len)	counter = str_len;	//Skip to end of line.
-		else					instance_destroy();	//Reads line -> sends back to obj_cutscene queue.
+		else {
+			global.pl_control_ov = true;			//Return player control.
+			instance_destroy();						//Read line -> destroy.
+		}
 }

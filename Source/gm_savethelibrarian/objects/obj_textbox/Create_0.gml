@@ -3,26 +3,27 @@
 //Box
 #region
 
-box_x					= 0;
-box_y					= 0;
-box_w					= 120;
-box_h					= 40;
+box_buff				= 32;
+box_x					= box_buff;
+box_y					= global.game_height*0.66;
+box_w					= global.game_width -(box_buff*2);
+box_h					= box_buff*1.48;
 box_spr					= spr_textbox;
 box_spr_w				= sprite_get_width (box_spr);
 box_spr_h				= sprite_get_height(box_spr);
 box_alpha				= 0;
-box_alpha_spd			= 0.144;
+box_alpha_spd			= 0.1;
 
 #endregion
 
 //Text
 #region
 
-x_buff					= 8;
-y_buff					= 4;
-txt_x					= box_x+x_buff;
-txt_y					= box_y+y_buff;
-txt_w					= box_w-x_buff-4;
+txt_x_buff				= 4;
+txt_y_buff				= 4;
+txt_x					= box_x+txt_x_buff;
+txt_y					= box_y+txt_y_buff;
+txt_w					= box_w*2;
 txt_h					= string_height("M");
 txt_wrap				= "";
 txt_spd					= 1;
@@ -56,5 +57,7 @@ function line_set(_char,_txt) {
 	str_len		= string_length(txt_wrap);
 	counter		= 0;
 }
-	
+
+global.pl_control_ov = false;
+
 #endregion
