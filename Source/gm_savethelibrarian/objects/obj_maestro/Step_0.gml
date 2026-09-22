@@ -1,1 +1,1 @@
-/// @description Lessen Music if in Intro Room
+///@desc Lessen Music if in Intro Room

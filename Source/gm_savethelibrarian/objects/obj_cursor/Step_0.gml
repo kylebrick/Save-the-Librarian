@@ -8,7 +8,7 @@ y_to	= mouse_y;
 y_pos	= lerp(y_pos,y_to,move_spd);
 y		= y_pos;
 
-if(mouse_check_button_pressed(mb_left)) {
+if(mouse_check_button_pressed(mb_left)) && (instance_exists(obj_grid)) {
 	var _grid_x = x div global.grid_size;
 	var _grid_y = y div global.grid_size;
 	if	(_grid_x >= 0) && (_grid_x < obj_grid.grid_w) && 
@@ -22,4 +22,3 @@ if(mouse_check_button_pressed(mb_left)) {
 			}
 		}
 }
-	
