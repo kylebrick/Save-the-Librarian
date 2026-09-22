@@ -1,27 +1,19 @@
 ///@desc Init
 
-
-//Build Path to Tile
-var _path_temp	= path_add();
-var _path_found = mp_grid_path(
-	obj_grid.mp_grid,_path_temp,
-	obj_player.x,obj_player.y,x,y,false); //false -> 4-directional only.
-
-//Move Player to Path
 with(obj_player) {
-	ds_list_clear(path_x);
-	ds_list_clear(path_y);
-	path_ind = 0;
+	contr_type = 1;
+	x_to = other.x;
+	y_to = other.y;
 	
-	if(_path_found) {
-		var _n = path_get_number(_path_temp);
-		for(var _i=1;_i<_n;_i++) { //Skip position 0 - current position.
-			ds_list_add(path_x,path_get_point_x(_path_temp,_i));
-			ds_list_add(path_y,path_get_point_y(_path_temp,_i));
-		}
-	}
-	contr_type	= 1;
+	var _point_dir = point_direction(x,y,other.x,other.y);
+	if(_point_dir >= 0	)  && (_point_dir < 45	) image_index = 3;
+	if(_point_dir >= 45	)  && (_point_dir < 90	) image_index = 0;
+	if(_point_dir >= 90 )  && (_point_dir < 135	) image_index = 0;
+	if(_point_dir >= 135 ) && (_point_dir < 180	) image_index = 2;
+	if(_point_dir >= 180 ) && (_point_dir < 225	) image_index = 2;
+	if(_point_dir >= 225 ) && (_point_dir < 270	) image_index = 1;
+	if(_point_dir >= 270 ) && (_point_dir < 315 ) image_index = 1;
+	if(_point_dir >= 315 ) && (_point_dir < 360 ) image_index = 3;
+	show_debug_message(_point_dir);
 }
-path_delete(_path_temp);
-
 image_speed = 0.5;

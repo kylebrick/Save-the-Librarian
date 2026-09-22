@@ -14,7 +14,10 @@
     "name":"_Macro",
     "path":"folders/Objects/_Macro.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_macro",
+    "path":"objects/obj_macro/obj_macro.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -15,6 +15,7 @@ function scr_macro_suite() {
 	var _macro_spr_width	= sprite_get_width(sprite_index);
 	var _macro_pos_offset	= 1;
 	var _macro_lay_id		= layer_get_id("Macro");
+	var _grid_lay_id		= layer_get_id("Grid");
 	#endregion
 	
 	//Spawn Objects
@@ -38,7 +39,7 @@ function scr_macro_suite() {
 	}
 
 	//Spawn Misc. Objects
-	if(!instance_exists(obj_grid))			instance_create_layer(room_width-12,y,_macro_lay_id,obj_grid	);
+	if(!instance_exists(obj_grid))			instance_create_layer(room_width-12,y,_grid_lay_id,obj_grid	);
 	//if(!instance_exists(obj_cutscene))	instance_create_layer(room_width-24,y,_macro_lay_id,obj_cutscene);
 	//if(!instance_exists(obj_textbox))		instance_create_layer(room_width-36,y,_macro_lay_id,obj_textbox );
 }
