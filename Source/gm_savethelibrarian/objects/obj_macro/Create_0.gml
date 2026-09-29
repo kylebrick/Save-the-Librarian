@@ -19,6 +19,7 @@ global.pl_control_ov	= true;
 global.pl_control_ui	= true;
 
 global.font_main		= font_add_sprite(fnt_main,32,true,1);
+draw_set_font		(global.font_main);
 display_set_gui_size(global.game_width,global.game_height);
 window_set_cursor(cr_none);
 

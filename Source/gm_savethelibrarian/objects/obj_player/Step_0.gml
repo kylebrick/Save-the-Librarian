@@ -9,11 +9,21 @@ if(global.pl_control_ov) {
 			var _key_left	= keyboard_check_pressed(vk_left	) || keyboard_check_pressed(ord("A"));
 			var _key_right	= keyboard_check_pressed(vk_right	) || keyboard_check_pressed(ord("D"));	
 	
-			if(_key_up)		&& (!position_meeting(x,y-global.grid_size,obj_col)) y -= global.grid_size;
-			if(_key_down)	&& (!position_meeting(x,y+global.grid_size,obj_col)) y += global.grid_size;
-			if(_key_left)	&& (!position_meeting(x-global.grid_size,y,obj_col)) x -= global.grid_size;
-			if(_key_right)	&& (!position_meeting(x+global.grid_size,y,obj_col)) x += global.grid_size;
-			
+			if(!moving) {
+				if(_key_up)		&& (!position_meeting(x,					y-global.grid_size,obj_col))	{y_to = y-global.grid_size; moving = true;}
+				if(_key_down)	&& (!position_meeting(x,					y+global.grid_size,obj_col))	{y_to = y+global.grid_size; moving = true;}
+				if(_key_left)	&& (!position_meeting(x-global.grid_size,	y,obj_col))						{x_to = x-global.grid_size; moving = true;}
+				if(_key_right)	&& (!position_meeting(x+global.grid_size,	y,obj_col))						{x_to = x+global.grid_size; moving = true;}
+			}
+			else {
+				x = lerp(x,x_to,move_spd);
+				y = lerp(y,y_to,move_spd);
+				if(point_distance(x,y,x_to,y_to)<1) {
+					x		= x_to;
+					y		= y_to;
+					moving	= false;
+				}
+			}
 			break;
 		}
 		case 1: {
