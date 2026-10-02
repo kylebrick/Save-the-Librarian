@@ -10,8 +10,8 @@
   "name":"obj_main_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"1 - Main Menu",
+    "path":"folders/Objects/Levels/1 - Main Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_main_menu",
-    "path":"sprites/spr_main_menu/spr_main_menu.yy",
+    "name":"spr_main_menu_enter",
+    "path":"sprites/spr_main_menu_enter/spr_main_menu_enter.yy",
   },
   "spriteMaskId":null,
   "visible":true,

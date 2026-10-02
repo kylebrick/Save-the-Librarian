@@ -33,7 +33,6 @@ function scr_macro_suite() {
 		if(_spawn) {						//Should we spawn this object?
 			if(!instance_exists(_obj)) {	//Does it already exist?
 				instance_create_layer(0+((_width+_offset)*_i),y,_lay_id,_obj);
-				show_debug_message(_i);
 			}
 		}
 	}

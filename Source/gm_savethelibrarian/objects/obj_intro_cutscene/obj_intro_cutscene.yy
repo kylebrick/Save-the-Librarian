@@ -10,8 +10,8 @@
   "name":"obj_intro_cutscene",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"2 - Intro Cutscene",
+    "path":"folders/Objects/Levels/2 - Intro Cutscene.yy",
   },
   "parentObjectId":null,
   "persistent":false,

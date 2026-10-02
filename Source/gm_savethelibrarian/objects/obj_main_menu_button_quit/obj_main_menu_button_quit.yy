@@ -3,17 +3,18 @@
   "%Name":"obj_main_menu_button_quit",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_main_menu_button_quit",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"1 - Main Menu",
+    "path":"folders/Objects/Levels/1 - Main Menu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_main_menu_button",
+    "path":"objects/par_main_menu_button/par_main_menu_button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -35,6 +36,9 @@
     "name":"spr_main_menu_button_quit",
     "path":"sprites/spr_main_menu_button_quit/spr_main_menu_button_quit.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_main_menu_button_quit",
+    "path":"sprites/spr_main_menu_button_quit/spr_main_menu_button_quit.yy",
+  },
   "visible":true,
 }

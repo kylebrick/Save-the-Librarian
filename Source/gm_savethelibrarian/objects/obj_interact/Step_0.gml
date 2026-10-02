@@ -25,3 +25,9 @@ switch(ref_player.image_index) {
 
 x = lerp(x,x_to,1);
 y = lerp(y,y_to,1);
+
+//Interact
+if(keyboard_check_pressed(ord("Z"))) && (place_meeting(x,y,obj_interactable)) {
+	image_index = 1;
+}
+else image_index = 0;

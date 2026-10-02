@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UI",
-    "path":"folders/Sprites/UI.yy",
+    "name":"2 - Intro Cutscene",
+    "path":"folders/Sprites/Levels/2 - Intro Cutscene.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

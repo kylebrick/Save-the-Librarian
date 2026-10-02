@@ -1,3 +1,3 @@
-///@desc Activate
+///@desc Advance State
 
-awake = true;
+state++;

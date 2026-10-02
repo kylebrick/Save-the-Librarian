@@ -1,3 +1,0 @@
-///@desc Awake
-
-awake = true;

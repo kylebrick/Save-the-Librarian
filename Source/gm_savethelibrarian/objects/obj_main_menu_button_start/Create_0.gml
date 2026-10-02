@@ -1,6 +1,9 @@
 ///@desc Init
 
-x_to		= xstart+152;
-y_to		= ystart;
-move_spd	= 0.1;
-awake		= false;
+event_inherited();
+x_to = xstart+152;
+
+function _press_button() {
+	show_debug_message("start");
+	room_goto_next();
+}
