@@ -16,9 +16,9 @@ if(!pause) && (counter < str_len) {
 if	(keyboard_check_pressed(key_interact)		||
 	(gamepad_button_check_pressed(0,gp_face1))	||
 	(mouse_check_button_pressed(mb_left))) {
-		if(counter < str_len)	counter = str_len;	//Skip to end of line.
+		if(counter<str_len)	counter = str_len;	//Skip to end of line.
 		else {
-			global.pl_control_ov = true;			//Return player control.
-			instance_destroy();						//Read line -> destroy.
+			global.pl_control_ov = true;		//Return player control.
+			instance_destroy();					//Read line -> destroy.
 		}
 }

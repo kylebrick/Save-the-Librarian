@@ -16,3 +16,8 @@ if(keyboard_check_pressed(ord("T"))) {
 		_box.line_set(_char, "This is a test line to check typewriter speed, portraits, and wrapping.");
 	}
 }
+if(keyboard_check_pressed(ord("Y"))) {
+	if(!instance_exists(obj_cutscene)) {
+		var _scene = instance_create_layer(global.game_width-12,y,"Macro",obj_cutscene);
+	}
+}

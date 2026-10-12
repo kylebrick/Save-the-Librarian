@@ -1,6 +1,5 @@
 ///@desc Move to Point
 
-show_debug_message(state);
 switch(state) {
 	case 0: { //Idle
 		break;

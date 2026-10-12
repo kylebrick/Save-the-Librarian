@@ -1,0 +1,5 @@
+Monday - Finalize pathfinding, textbox spawn/wrapping, and HTML web export to itch.io (3h).
+Tuesday - Placeholder character portraits w/ dialogue choices and "points" or correct/incorrect indicators (2.5h).
+Wednesday - Interactables, finding items, environmental puzzles, etc.
+Thursday - Menus & UI (options, pause, etc.)
+Friday - Polish, misc., and catch-up.
