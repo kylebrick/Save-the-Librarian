@@ -8,9 +8,9 @@ y_to	= mouse_y;
 y_pos	= lerp(y_pos,y_to,move_spd);
 y		= y_pos;
 
-if(instance_exists(obj_grid)) {
+if(instance_exists(obj_grid)) && (instance_exists(obj_player)) {
 	if(mouse_check_button_pressed(mb_left)) {
-		if(place_meeting(x,y,obj_col)) {
+		if		( place_meeting(x,y,obj_col		))	{
 			
 			//Change player's direction, but don't move into space.
 			with(obj_player) {
@@ -18,23 +18,32 @@ if(instance_exists(obj_grid)) {
 				scr_change_player_facing(_dir)
 			}
 		}
-		else if(!place_meeting(x,y,obj_col)) {
-		var _grid_x = x div global.grid_size;
-		var _grid_y = y div global.grid_size;
-		if	(_grid_x >= 0) && (_grid_x < obj_grid.grid_w) && 
-			(_grid_y >= 0) && (_grid_y < obj_grid.grid_h) {
-				if(ds_grid_get(obj_grid.grid,_grid_x,_grid_y) == 0) {
-					instance_create_depth(
-						(_grid_x*global.grid_size)+(global.grid_size/2),
-						(_grid_y*global.grid_size)+(global.grid_size/2),
-						depth,obj_position_marker
-					);
-				}
-			}
-		}
-		else if(place_meeting(x,y,obj_interact)) {
+		else if	(!place_meeting(x,y,obj_col		))	{
+				var _px		= obj_player.x;
+				var _py		= obj_player.y;
+				var _grid_x = x div global.grid_size;
+				var _grid_y = y div global.grid_size;
 			
-			//For testing later
+				//Valid path? -> Place position marker.
+				if(!collision_line(_px,_py,x,y,obj_col,false,true)) {
+					
+					scr_debug_msg();
+					
+					if	(_grid_x >= 0) && (_grid_x < obj_grid.grid_w) && 
+						(_grid_y >= 0) && (_grid_y < obj_grid.grid_h) {
+							if(ds_grid_get(obj_grid.grid,_grid_x,_grid_y) == 0) {
+								instance_create_depth(
+									(_grid_x*global.grid_size)+(global.grid_size/2),
+									(_grid_y*global.grid_size)+(global.grid_size/2),
+									depth,obj_position_marker
+								);
+							}
+					}
+				}
+		}
+		else if	( place_meeting(x,y,obj_interact))	{
+			
+			//For Testing Later - Interact
 			#region
 			/*
 			show_debug_message("Weeeee");
