@@ -9,7 +9,7 @@ global.maestro			= obj_maestro	;
 global.textbox			= obj_textbox	;
 global.director			= obj_director	;
 global.resolution		= obj_resolution;
-global.collision_map	= obj_col_map	;
+global.collision_map	= obj_trigger_map	;
 
 global.game_width		= 256;
 global.game_height		= 144;

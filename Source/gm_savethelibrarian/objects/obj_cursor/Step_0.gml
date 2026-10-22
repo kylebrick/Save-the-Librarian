@@ -33,13 +33,10 @@ if(instance_exists(obj_grid)) {
 			
 				//Valid path? -> Place position marker.
 				if(obj_grid.valid_path) {
-					
-					scr_debug_msg("valid path?",true);
-					
 					instance_create_depth(
 						(_grid_x*global.grid_size)+(global.grid_size/2),
 						(_grid_y*global.grid_size)+(global.grid_size/2),
-						depth,obj_position_marker
+						obj_player.depth+1,obj_position_marker
 					);
 				}
 				else					{ //Move to the nearest valid space.
