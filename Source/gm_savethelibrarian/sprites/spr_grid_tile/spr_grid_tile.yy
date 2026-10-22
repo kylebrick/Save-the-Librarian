@@ -19,7 +19,7 @@
   "height":16,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","blendMode":0,"displayName":"default","isLocked":false,"name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","opacity":25.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","blendMode":0,"displayName":"default","isLocked":false,"name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","opacity":10.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_grid_tile",
   "nineSlice":null,

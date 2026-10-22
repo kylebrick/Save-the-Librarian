@@ -16,7 +16,10 @@ function char_get_name(_name) {return cast[$ _name];}
 //Cast List
 //char_register("lucy",fnt_lucy,sfx_voice_lucy,spr_portr_lucy);
 //char_register("four arms",fnt_fourarms,sfx_voice_fourarms,spr_portr_fourarms);
+char_register("test",global.font_main,sfx_msg,spr_test_portrait);
 
 #endregion
 
-char_register("test",global.font_main,sfx_msg,spr_test_portrait);
+//Positions
+room_init_pos_x = 200;
+room_init_pos_y = 184;

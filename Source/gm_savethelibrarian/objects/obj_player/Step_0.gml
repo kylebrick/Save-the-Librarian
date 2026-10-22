@@ -21,9 +21,9 @@ if(global.pl_control_ov) {
 				x = lerp(x,x_to,move_spd/2);
 				y = lerp(y,y_to,move_spd/2);
 			}
-			if(point_distance(x,y,x_to,y_to)<1) {
-				x_to		= x;
-				y_to		= y;
+			if(point_distance(x,y,x_to,y_to)<move_thresh) {
+				x			= x_to;
+				y			= y_to;
 				moving		= false;
 				contr_type	= 0;
 			}

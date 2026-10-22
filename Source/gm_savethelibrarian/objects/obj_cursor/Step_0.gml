@@ -34,7 +34,7 @@ if(instance_exists(obj_grid)) {
 				//Valid path? -> Place position marker.
 				if(obj_grid.valid_path) {
 					
-					scr_debug_msg();
+					scr_debug_msg("valid path?",true);
 					
 					instance_create_depth(
 						(_grid_x*global.grid_size)+(global.grid_size/2),

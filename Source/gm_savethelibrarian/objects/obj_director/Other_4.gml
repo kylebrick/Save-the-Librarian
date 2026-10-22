@@ -1,4 +1,17 @@
-/// @desc Reset Once-Through
+/// @desc Places, Please!
+
+switch(room) {
+	case rm_003_level: {
+		
+		//Camera Init Position
+		with(obj_camera) {
+			x_pos = other.room_init_pos_x+(global.grid_size/2);
+			y_pos = other.room_init_pos_y+(global.grid_size/2);
+			camera_set_view_pos(cam,x_pos-(cam_w/2),y_pos-(cam_h/2));
+		}
+	}
+}
+
 /*
 switch(room)
 {
