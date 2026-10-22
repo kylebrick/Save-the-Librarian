@@ -22,7 +22,9 @@
   "height":48,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"625b75b2-0ea4-40b8-805a-86f286f8fcd5","blendMode":0,"displayName":"player","isLocked":false,"name":"625b75b2-0ea4-40b8-805a-86f286f8fcd5","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"05180206-85b3-474c-90b3-bddf32a8403e","blendMode":0,"displayName":"girl","isLocked":false,"name":"05180206-85b3-474c-90b3-bddf32a8403e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"818b1f24-39ec-49d7-9be2-e0345698720f","blendMode":0,"displayName":"boy","isLocked":false,"name":"818b1f24-39ec-49d7-9be2-e0345698720f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
+    {"$GMImageLayer":"","%Name":"625b75b2-0ea4-40b8-805a-86f286f8fcd5","blendMode":0,"displayName":"base","isLocked":false,"name":"625b75b2-0ea4-40b8-805a-86f286f8fcd5","opacity":50.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_player",
   "nineSlice":{

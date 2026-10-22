@@ -1,5 +1,8 @@
 ///@desc Move to Mouse
 
+//Movement
+#region
+
 x_to	= mouse_x;
 x_pos	= lerp(x_pos,x_to,move_spd);
 x		= x_pos;
@@ -8,7 +11,11 @@ y_to	= mouse_y;
 y_pos	= lerp(y_pos,y_to,move_spd);
 y		= y_pos;
 
-if(instance_exists(obj_grid)) && (instance_exists(obj_player)) {
+#endregion
+
+//Handle Input
+
+if(instance_exists(obj_grid)) {
 	if(mouse_check_button_pressed(mb_left)) {
 		if		( place_meeting(x,y,obj_col		))	{
 			
@@ -25,20 +32,18 @@ if(instance_exists(obj_grid)) && (instance_exists(obj_player)) {
 				var _grid_y = y div global.grid_size;
 			
 				//Valid path? -> Place position marker.
-				if(!collision_line(_px,_py,x,y,obj_col,false,true)) {
+				if(obj_grid.valid_path) {
 					
 					scr_debug_msg();
 					
-					if	(_grid_x >= 0) && (_grid_x < obj_grid.grid_w) && 
-						(_grid_y >= 0) && (_grid_y < obj_grid.grid_h) {
-							if(ds_grid_get(obj_grid.grid,_grid_x,_grid_y) == 0) {
-								instance_create_depth(
-									(_grid_x*global.grid_size)+(global.grid_size/2),
-									(_grid_y*global.grid_size)+(global.grid_size/2),
-									depth,obj_position_marker
-								);
-							}
-					}
+					instance_create_depth(
+						(_grid_x*global.grid_size)+(global.grid_size/2),
+						(_grid_y*global.grid_size)+(global.grid_size/2),
+						depth,obj_position_marker
+					);
+				}
+				else					{ //Move to the nearest valid space.
+					
 				}
 		}
 		else if	( place_meeting(x,y,obj_interact))	{
@@ -85,10 +90,10 @@ if(instance_exists(obj_grid)) && (instance_exists(obj_player)) {
 				contr_type			= 1;
 			}
 			*/
-			#endregion
+			//#endregion
 			
 			//Create textbox
-			scr_create_textbox("test","this is a test. weeee. i can type anything here, huh?");
+			//scr_create_textbox("test","this is a test. weeee. i can type anything here, huh?");
 		}
 	}
 }
