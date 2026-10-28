@@ -36,6 +36,9 @@
     "name":"spr_cursor",
     "path":"sprites/spr_cursor/spr_cursor.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_cursor",
+    "path":"sprites/spr_cursor/spr_cursor.yy",
+  },
   "visible":true,
 }

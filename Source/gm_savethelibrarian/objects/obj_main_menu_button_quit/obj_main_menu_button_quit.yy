@@ -37,8 +37,8 @@
     "path":"sprites/spr_main_menu_button_quit/spr_main_menu_button_quit.yy",
   },
   "spriteMaskId":{
-    "name":"spr_main_menu_button_quit",
-    "path":"sprites/spr_main_menu_button_quit/spr_main_menu_button_quit.yy",
+    "name":"spr_main_menu_button_start",
+    "path":"sprites/spr_main_menu_button_start/spr_main_menu_button_start.yy",
   },
   "visible":true,
 }

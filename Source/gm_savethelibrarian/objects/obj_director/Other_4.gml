@@ -1,7 +1,7 @@
 /// @desc Places, Please!
 
 switch(room) {
-	case rm_003_level: {
+	case rm_004_level: {
 		
 		//Camera Init Position
 		with(obj_camera) {

@@ -37,8 +37,8 @@
     "path":"sprites/spr_main_menu_button_options/spr_main_menu_button_options.yy",
   },
   "spriteMaskId":{
-    "name":"spr_main_menu_button_options",
-    "path":"sprites/spr_main_menu_button_options/spr_main_menu_button_options.yy",
+    "name":"spr_main_menu_button_start",
+    "path":"sprites/spr_main_menu_button_start/spr_main_menu_button_start.yy",
   },
   "visible":true,
 }

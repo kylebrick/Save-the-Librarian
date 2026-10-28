@@ -36,6 +36,9 @@
     "name":"spr_main_menu_button_start",
     "path":"sprites/spr_main_menu_button_start/spr_main_menu_button_start.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_main_menu_button_start",
+    "path":"sprites/spr_main_menu_button_start/spr_main_menu_button_start.yy",
+  },
   "visible":true,
 }
