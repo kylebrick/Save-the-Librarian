@@ -1,3 +1,3 @@
-///@desc Awake
+///@desc Begin Cutscene
 
-awake = true;
+state++;

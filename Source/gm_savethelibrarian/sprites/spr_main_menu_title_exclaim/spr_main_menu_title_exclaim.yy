@@ -3,7 +3,7 @@
   "%Name":"spr_main_menu_title_exclaim",
   "bboxMode":0,
   "bbox_bottom":59,
-  "bbox_left":0,
+  "bbox_left":90,
   "bbox_right":100,
   "bbox_top":40,
   "collisionKind":1,

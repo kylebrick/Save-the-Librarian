@@ -131,6 +131,7 @@
     {"id":{"name":"spr_main_menu_title_save","path":"sprites/spr_main_menu_title_save/spr_main_menu_title_save.yy",},},
     {"id":{"name":"spr_main_menu_title_the","path":"sprites/spr_main_menu_title_the/spr_main_menu_title_the.yy",},},
     {"id":{"name":"spr_main_menu_title","path":"sprites/spr_main_menu_title/spr_main_menu_title.yy",},},
+    {"id":{"name":"spr_misc_conc_art_palette","path":"sprites/spr_misc_conc_art_palette/spr_misc_conc_art_palette.yy",},},
     {"id":{"name":"spr_npc_brookestacks","path":"sprites/spr_npc_brookestacks/spr_npc_brookestacks.yy",},},
     {"id":{"name":"spr_npc_catalogue","path":"sprites/spr_npc_catalogue/spr_npc_catalogue.yy",},},
     {"id":{"name":"spr_npc_lineup","path":"sprites/spr_npc_lineup/spr_npc_lineup.yy",},},

@@ -11,6 +11,8 @@ anim_open_spr		= spr_main_menu_open;
 anim_open_spd		= 0.5;
 anim_open_delay		= 0.5;
 
+anim_float_delay	= 0.01;
+
 image_index			= 0;
 image_speed			= 0;
 alarm[0]			= global.game_spd*anim_enter_delay;

@@ -30,19 +30,30 @@ switch(state) {
 	}
 	case 3: { //Activate
 		
-			var _menu_1 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
-				_menu_1.depth			= depth-1;
-				_menu_1.sprite_index	= spr_main_menu_title_save;
-			var _menu_2 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
-				_menu_2.depth			= depth-2;
-				_menu_2.sprite_index	= spr_main_menu_title_the;
-			var _menu_3 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
-				_menu_3.depth			= depth-3;
-				_menu_3.sprite_index	= spr_main_menu_title_librarian;
-			var _menu_4 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
-				_menu_4.depth			= depth-4;
-				_menu_4.sprite_index	= spr_main_menu_title_exclaim;
-				
+			var		 _menu_1 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
+				with(_menu_1) {
+					depth			= other.depth-1											;
+					sprite_index	= spr_main_menu_title_save								;
+					alarm[0]		= global.game_spd*(other.anim_float_delay+(sine_sep*1))	;
+				}
+			var		 _menu_2 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
+				with(_menu_2) {
+					depth			= other.depth-2											;
+					sprite_index	= spr_main_menu_title_the								;
+					alarm[0]		= global.game_spd*(other.anim_float_delay+(sine_sep*2))	;
+				}
+			var		 _menu_3 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
+				with(_menu_3) {
+					depth			= other.depth-3											;
+					sprite_index	= spr_main_menu_title_librarian							;
+					alarm[0]		= global.game_spd*(other.anim_float_delay+(sine_sep*3))	;
+				}
+			var		 _menu_4 = instance_create_layer(x,y-16,"UI",obj_main_menu_title);
+				with(_menu_4) {
+					depth			= other.depth-4											;
+					sprite_index	= spr_main_menu_title_exclaim							;
+					alarm[0]		= global.game_spd*(other.anim_float_delay+(sine_sep*4))	;
+				}
 			var _del = 1;
 			with(obj_main_menu_button_start)	alarm[0] = global.game_spd*_del;
 			with(obj_main_menu_button_options)	alarm[0] = global.game_spd*_del;
