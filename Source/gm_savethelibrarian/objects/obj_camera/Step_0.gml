@@ -1,6 +1,6 @@
 /// @description Update Camera
 
-with(obj_player) other.cam_follow = self;
+with(obj_player_ov) other.cam_follow = self;
 
 //Update Destination
 if(instance_exists(cam_follow)) || (cam_follow != noone) {

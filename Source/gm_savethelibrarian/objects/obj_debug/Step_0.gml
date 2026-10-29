@@ -11,9 +11,12 @@ if(keyboard_check_pressed		(192	))		{							//Toggle Macro Suit Visible.
 }
 if(keyboard_check_pressed		(ord("T")))		{							//Spawn Textbox.
 	if(!instance_exists(obj_textbox)) && (instance_exists(global.director)) {
-		var _char = global.director.char_get_name("test");
-		var _box = instance_create_layer(global.game_width-36,y,"Macro",obj_textbox);
-		_box.line_set(_char, "This is a test line to check typewriter speed, portraits, and wrapping.");
+		var _char_1 = global.director.char_get_name("lyle_brary");
+		var _char_2 = global.director.char_get_name("miss_info");
+		var _box = instance_create_layer(global.game_width-36,0,"Text",obj_textbox);
+		_box.speakers[0] = _char_1;
+		_box.speakers[1] = _char_2;
+		_box.line_set(_char_1, "This is a test line to check typewriter speed, portraits, and wrapping.");
 	}
 }
 if(keyboard_check_pressed		(ord("Y")))		{							//Spawn Cutscene.

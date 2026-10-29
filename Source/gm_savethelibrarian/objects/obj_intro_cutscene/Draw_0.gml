@@ -1,5 +1,5 @@
 ///@desc Cutscene
-
+ 
 switch(state) {
 	case 0:		{					break;}
 	case 1:		{ //Wait
@@ -109,5 +109,3 @@ switch(state) {
 function alarm_state_inc() {
 	if(!alarm[1]) alarm[1] = global.game_spd*scene_delay_timers[state];
 }
-
-scr_debug_msg("state",state);

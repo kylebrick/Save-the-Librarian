@@ -45,8 +45,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"Player",
-    "path":"folders/Sprites/Player.yy",
+    "name":"Triggers",
+    "path":"folders/Sprites/Triggers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

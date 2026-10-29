@@ -4,7 +4,7 @@ x_to		= x;
 y_to		= y;
 move_spd	= 0.1;
 
-ref_player	= obj_player;
+ref_player	= obj_player_ov;
 x_offset	= global.grid_size;
 y_offset	= global.grid_size;
 

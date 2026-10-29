@@ -33,8 +33,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UI",
-    "path":"folders/Sprites/UI.yy",
+    "name":"Triggers",
+    "path":"folders/Sprites/Triggers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

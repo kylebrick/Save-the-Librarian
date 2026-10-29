@@ -9,8 +9,8 @@
   "name":"obj_interact",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"Triggers",
+    "path":"folders/Objects/Triggers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

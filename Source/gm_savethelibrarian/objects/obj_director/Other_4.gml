@@ -5,8 +5,8 @@ switch(room) {
 		
 		//Camera Init Position
 		with(obj_camera) {
-			x_pos = other.room_init_pos_x+(global.grid_size/2);
-			y_pos = other.room_init_pos_y+(global.grid_size/2);
+			x_pos = other.room_init_pos_x;
+			y_pos = other.room_init_pos_y;
 			camera_set_view_pos(cam,x_pos-(cam_w/2),y_pos-(cam_h/2));
 		}
 	}

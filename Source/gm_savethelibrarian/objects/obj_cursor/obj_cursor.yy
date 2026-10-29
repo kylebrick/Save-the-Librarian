@@ -33,12 +33,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cursor",
-    "path":"sprites/spr_cursor/spr_cursor.yy",
+    "name":"spr_ui_cursor",
+    "path":"sprites/spr_ui_cursor/spr_ui_cursor.yy",
   },
   "spriteMaskId":{
-    "name":"spr_cursor",
-    "path":"sprites/spr_cursor/spr_cursor.yy",
+    "name":"spr_ui_cursor",
+    "path":"sprites/spr_ui_cursor/spr_ui_cursor.yy",
   },
   "visible":true,
 }

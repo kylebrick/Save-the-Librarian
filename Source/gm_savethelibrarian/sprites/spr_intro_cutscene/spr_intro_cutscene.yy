@@ -29,7 +29,7 @@
     {"$GMImageFolderLayer":"","%Name":"c10474c6-0d8c-4a36-b809-1e3e8baa855d","blendMode":0,"displayName":"text","isLocked":false,"layers":[
         {"$GMImageLayer":"","%Name":"987d1969-89a5-47be-85c0-9a53330ff21c","blendMode":0,"displayName":"text","isLocked":false,"name":"987d1969-89a5-47be-85c0-9a53330ff21c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
         {"$GMImageLayer":"","%Name":"1b4982cc-87f6-4b8e-be1c-95ed9f272980","blendMode":0,"displayName":"text_dith","isLocked":false,"name":"1b4982cc-87f6-4b8e-be1c-95ed9f272980","opacity":60.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-        {"$GMImageLayer":"","%Name":"185273d3-e57d-4326-b179-1f5f55d57b2e","blendMode":1,"displayName":"wood_tex","isLocked":false,"name":"185273d3-e57d-4326-b179-1f5f55d57b2e","opacity":20.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+        {"$GMImageLayer":"","%Name":"185273d3-e57d-4326-b179-1f5f55d57b2e","blendMode":1,"displayName":"wood_tex","isLocked":false,"name":"185273d3-e57d-4326-b179-1f5f55d57b2e","opacity":20.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
         {"$GMImageLayer":"","%Name":"70cafd7d-2568-4464-b1ff-593c43ac3227","blendMode":0,"displayName":"text_bgr","isLocked":false,"name":"70cafd7d-2568-4464-b1ff-593c43ac3227","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
       ],"name":"c10474c6-0d8c-4a36-b809-1e3e8baa855d","opacity":100.0,"resourceType":"GMImageFolderLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageFolderLayer":"","%Name":"1b3af0cf-0c7e-44d8-b80e-022bec1aa680","blendMode":0,"displayName":"border","isLocked":true,"layers":[

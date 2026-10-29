@@ -6,7 +6,7 @@ switch(state) {
 	}
 	case 1: { //Enter
 		
-		sprite_index = spr_main_menu_enter;
+		sprite_index = spr_main_menu_book_enter;
 		if(image_index >= image_number-1) {
 			image_index = image_number-1; image_speed = 0;
 			if(!alarm[0]) {
@@ -18,7 +18,7 @@ switch(state) {
 		break;	
 	}
 	case 2: { //Open
-		sprite_index = spr_main_menu_open;
+		sprite_index = spr_main_menu_book_open;
 		if(image_index >= image_number-1) {
 			image_index = image_number-1; image_speed = 0;
 			if(!alarm[0]) {

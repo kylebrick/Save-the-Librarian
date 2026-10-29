@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_main_menu_enter",
-    "path":"sprites/spr_main_menu_enter/spr_main_menu_enter.yy",
+    "name":"spr_main_menu_book_enter",
+    "path":"sprites/spr_main_menu_book_enter/spr_main_menu_book_enter.yy",
   },
   "spriteMaskId":null,
   "visible":true,

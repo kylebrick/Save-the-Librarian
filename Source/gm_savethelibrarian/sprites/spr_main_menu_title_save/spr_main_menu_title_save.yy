@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"1 - Main Menu",
-    "path":"folders/Sprites/Levels/1 - Main Menu.yy",
+    "name":"Title",
+    "path":"folders/Sprites/Levels/1 - Main Menu/Title.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

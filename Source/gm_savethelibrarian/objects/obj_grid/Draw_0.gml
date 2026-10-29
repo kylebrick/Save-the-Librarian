@@ -10,9 +10,9 @@ for(var _i=0;_i<grid_w;_i++) {
 #endregion
 
 //Draw hovering tile select & determine if path is valid.
-if(instance_exists(obj_player)) {
-	var _px			= obj_player.x;
-	var _py			= obj_player.y;
+if(instance_exists(obj_player_ov)) {
+	var _px			= obj_player_ov.x;
+	var _py			= obj_player_ov.y;
 	var _cx			= (hover_grid_x*global.grid_size)+(global.grid_size/2);
 	var _cy			= (hover_grid_y*global.grid_size)+(global.grid_size/2);
 	var _dir		= point_direction(_px,_py,_cx,_cy);

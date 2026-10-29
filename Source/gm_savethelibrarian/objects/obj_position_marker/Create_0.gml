@@ -1,6 +1,6 @@
 ///@desc Init
 
-with(obj_player) {
+with(obj_player_ov) {
 	contr_type	= 1;
 	moving		= true;
 	x_to		= other.x;

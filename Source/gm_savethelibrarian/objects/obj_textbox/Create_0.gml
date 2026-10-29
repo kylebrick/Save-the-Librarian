@@ -3,16 +3,15 @@
 //Box
 #region
 
-box_buff				= 32;
-box_x					= box_buff;
-box_y					= global.game_height*0.66;
-box_w					= global.game_width -(box_buff*1.8);
-box_h					= box_buff*1.48;
+box_x					= global.game_width/2;
+box_y					= 104;
+box_w					= 164;
+box_h					= 38;
 box_spr					= spr_textbox;
 box_spr_w				= sprite_get_width (box_spr);
 box_spr_h				= sprite_get_height(box_spr);
 box_alpha				= 0;
-box_alpha_spd			= 0.1;
+box_alpha_spd			= 0.075;
 
 #endregion
 
@@ -21,9 +20,10 @@ box_alpha_spd			= 0.1;
 
 txt_x_buff				= 6;
 txt_y_buff				= 4;
-txt_x					= box_x+txt_x_buff;
+txt_w_buff				= 6;
+txt_x					= box_x-(box_w/2)+txt_x_buff;
 txt_y					= box_y+txt_y_buff;
-txt_w					= box_w;
+txt_w					= box_w-txt_w_buff;
 txt_h					= string_height("M");
 txt_wrap				= "";
 txt_spd					= 1;
@@ -39,13 +39,23 @@ portr_y					= 2;
 
 #endregion
 
-//Character
+//Speakers
 #region
 
 char					= undefined;
-	//font
-	//voice
-	//portr
+speakers				= [
+	undefined,
+	undefined
+];
+speakers_sep			= 48; //How far apart from textbox center to separate speakers
+
+#endregion
+
+//Backdrop
+#region
+
+backdrop_alpha			= 0;
+backdrop_alpha_max		= 0.25;
 
 #endregion
 
@@ -58,6 +68,7 @@ pause_time_comma		= 14;
 pause_time_period		= 0;
 pause_time_exclaim		= 24;
 pause_time_question		= 0;
+
 key_interact			= ord("Z");
 function line_set(_char,_txt) {
 	char		= _char;

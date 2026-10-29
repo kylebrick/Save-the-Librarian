@@ -20,14 +20,14 @@ if(instance_exists(obj_grid)) {
 		if		( place_meeting(x,y,obj_col		))	{
 			
 			//Change player's direction, but don't move into space.
-			with(obj_player) {
+			with(obj_player_ov) {
 				var _dir = point_direction(x,y,other.x,other.y);
 				scr_change_player_facing(_dir)
 			}
 		}
 		else if	(!place_meeting(x,y,obj_col		))	{
-				var _px		= obj_player.x;
-				var _py		= obj_player.y;
+				var _px		= obj_player_ov.x;
+				var _py		= obj_player_ov.y;
 				var _grid_x = x div global.grid_size;
 				var _grid_y = y div global.grid_size;
 			
@@ -36,7 +36,7 @@ if(instance_exists(obj_grid)) {
 					instance_create_depth(
 						(_grid_x*global.grid_size)+(global.grid_size/2),
 						(_grid_y*global.grid_size)+(global.grid_size/2),
-						obj_player.depth+1,obj_position_marker
+						obj_player_ov.depth+1,obj_position_marker
 					);
 				}
 				else					{ //Move to the nearest valid space.
