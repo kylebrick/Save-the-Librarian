@@ -3,6 +3,12 @@
 switch(room) {
 	case rm_004_level: {
 		
+		//Cursor Init Position
+		with(obj_cursor) {
+			x = mouse_x+obj_camera.x_pos;
+			y = mouse_y+obj_camera.y_pos;
+		}
+		
 		//Camera Init Position
 		with(obj_camera) {
 			x_pos = other.room_init_pos_x;

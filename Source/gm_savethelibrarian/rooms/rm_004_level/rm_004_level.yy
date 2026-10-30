@@ -7,24 +7,21 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_670A95D5_1_1_1_1","path":"rooms/rm_004_level/rm_004_level.yy",},
-    {"name":"inst_491EB382_1_1_1_1","path":"rooms/rm_004_level/rm_004_level.yy",},
     {"name":"inst_3BC55C42_1_1_1_1","path":"rooms/rm_004_level/rm_004_level.yy",},
-    {"name":"inst_5BAB2B0","path":"rooms/rm_004_level/rm_004_level.yy",},
-    {"name":"inst_1F7BE8EE","path":"rooms/rm_004_level/rm_004_level.yy",},
-    {"name":"inst_722C9127","path":"rooms/rm_004_level/rm_004_level.yy",},
     {"name":"inst_F7159C4","path":"rooms/rm_004_level/rm_004_level.yy",},
     {"name":"inst_649CB6A4","path":"rooms/rm_004_level/rm_004_level.yy",},
     {"name":"inst_52439A77","path":"rooms/rm_004_level/rm_004_level.yy",},
     {"name":"inst_61117A52","path":"rooms/rm_004_level/rm_004_level.yy",},
+    {"name":"inst_5BAB2B0","path":"rooms/rm_004_level/rm_004_level.yy",},
+    {"name":"inst_1F7BE8EE","path":"rooms/rm_004_level/rm_004_level.yy",},
+    {"name":"inst_722C9127","path":"rooms/rm_004_level/rm_004_level.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Macro","depth":0,"effectEnabled":true,"effectType":null,"gridX":4,"gridY":4,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_670A95D5_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_670A95D5_1_1_1_1","objectId":{"name":"obj_macro","path":"objects/obj_macro/obj_macro.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":12.0,},
       ],"layers":[],"name":"Macro","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Cursor","depth":100,"effectEnabled":true,"effectType":null,"gridX":4,"gridY":4,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_491EB382_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_491EB382_1_1_1_1","objectId":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":12.0,},
-      ],"layers":[],"name":"Cursor","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Cursor","depth":100,"effectEnabled":true,"effectType":null,"gridX":4,"gridY":4,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Cursor","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Text","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Text","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":300,"effectEnabled":true,"effectType":null,"gridX":4,"gridY":4,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_3BC55C42_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":1,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BC55C42_1_1_1_1","objectId":{"name":"obj_player_ov","path":"objects/obj_player_ov/obj_player_ov.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":176.0,"y":176.0,},

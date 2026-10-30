@@ -65,9 +65,9 @@ backdrop_alpha_max		= 0.25;
 counter					= 0;
 pause					= false;
 pause_time_comma		= 14;
-pause_time_period		= 0;
+pause_time_period		= 1;
 pause_time_exclaim		= 24;
-pause_time_question		= 0;
+pause_time_question		= 1;
 
 key_interact			= ord("Z");
 function line_set(_char,_txt) {
