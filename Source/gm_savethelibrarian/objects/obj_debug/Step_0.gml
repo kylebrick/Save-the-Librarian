@@ -10,14 +10,15 @@ if(keyboard_check_pressed		(192	))		{									//Toggle Macro Suit Visible.
 	layer_set_visible(_lay_id,!_lay_vis);
 }
 if(keyboard_check_pressed		(ord("T")))		{									//Spawn Textbox.
-	if(!instance_exists(obj_textbox)) && (instance_exists(global.director)) {
-		var _char_1 = global.director.char_get_name("lyle_brary");
-		var _char_2 = global.director.char_get_name("miss_info");
-		var _box = instance_create_layer(global.game_width-36,0,"Text",obj_textbox);
-		_box.speakers[0] = _char_1;
-		_box.speakers[1] = _char_2;
-		_box.line_set(_char_1, "Hee hee. So, I guess the textbox is working after all, eh?");
-	}
+		var _lyle		= global.director.char_get_name("lyle_brary")	;
+		var _ms_info	= global.director.char_get_name("miss_info" )	;
+		scr_create_textbox(_lyle,_ms_info,
+			[
+				[_ms_info,"Hee hee. So, I guess the textbox is working after all, eh?"],
+				[_lyle,"This madness has to end, Miss Information!"],
+				[_ms_info,"I agree. Let's see what you're made of, kid."],
+			]
+		);
 }
 if(keyboard_check_pressed		(ord("Y")))		{									//Spawn Cutscene.
 	if(!instance_exists(obj_cutscene)) instance_create_layer(global.game_width-12,y,"Macro",obj_cutscene);

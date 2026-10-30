@@ -2,23 +2,26 @@
 
 if(char == undefined) exit;
 
+//Type
 if(!pause) && (counter < str_len) {
 	counter += txt_spd;
 	if((counter mod 4) == 0) audio_play_sound(char.voice,10,false);
 	switch(string_char_at(txt_wrap,counter)) {
-		case ",": pause = true; alarm[0] = pause_time_comma;	break;
-		case ".": pause = true; alarm[0] = pause_time_period;	break;
-		case "!": pause = true; alarm[0] = pause_time_exclaim;	break;
-		case "?": pause = true; alarm[0] = pause_time_question;	break;
+		case ",": {pause = true; alarm[0] = pause_time_comma;		break;}
+		case ".": {pause = true; alarm[0] = pause_time_period;		break;}
+		case "!": {pause = true; alarm[0] = pause_time_exclaim;		break;}
+		case "?": {pause = true; alarm[0] = pause_time_question;	break;}
+		default:  {													break;}
 	}
 }
-
-if	(keyboard_check_pressed(key_interact)		||
-	(gamepad_button_check_pressed(0,gp_face1))	||
+//Interact
+if	(keyboard_check_pressed(key_interact) ||
 	(mouse_check_button_pressed(mb_left))) {
 		if(counter<str_len)	counter = str_len;	//Skip to end of line.
 		else {
-			global.pl_control_ov = true;		//Return player control.
-			instance_destroy();					//Read line -> destroy.
+			if(!_dialogue_line_load(dialogue_line+1)) {
+				global.pl_control_ov = true;		//Return player control.
+				instance_destroy();					//Read line -> destroy.
+			}
 		}
 }
