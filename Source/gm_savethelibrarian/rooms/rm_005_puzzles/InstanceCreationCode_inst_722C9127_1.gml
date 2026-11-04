@@ -1,0 +1,1 @@
+function _trigger() {room_goto(rm_006_result);}

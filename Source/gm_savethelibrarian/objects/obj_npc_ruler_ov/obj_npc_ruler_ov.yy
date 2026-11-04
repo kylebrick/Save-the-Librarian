@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Characters",
-    "path":"folders/Objects/Characters.yy",
+    "path":"folders/Objects/Levels/4 - Level/Characters.yy",
   },
   "parentObjectId":null,
   "persistent":false,

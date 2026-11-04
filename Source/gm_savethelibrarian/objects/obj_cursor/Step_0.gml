@@ -2,30 +2,36 @@
 
 //State-Machine
 switch(room) {
-	case rm_000_startup:		{
+	case rm_000_startup:		{type = 0;
+		_move_cursor_to_mouse();
+		break;
+	}
+	case rm_001_main_menu:		{type = 0;
 		_move_cursor_to_mouse(); 
 		break;
 	}
-	case rm_001_main_menu:		{
+	case rm_002_opening:		{type = 0;
 		_move_cursor_to_mouse(); 
 		break;
 	}
-	case rm_002_opening:		{
+	case rm_003_char_select:	{type = 0;
 		_move_cursor_to_mouse(); 
 		break;
 	}
-	case rm_003_char_select:	{
-		_move_cursor_to_mouse(); 
-		break;
-	}
-	case rm_004_level:			{
+	case rm_004_level:			{type = 0;
 		_move_cursor_to_mouse();
 		_grid_cursor_input();
+		break;
+	}
+	case rm_005_puzzle:			{type = 1;
+		_move_cursor_to_mouse();
 		break;
 	}
 }
 
 //Function
+#region
+
 function _obj_ref_check(_obj_list) {
 	for(var _i=0;_i<argument_count;_i++) {
 		if(!instance_exists(argument[_i])) return false;
@@ -41,8 +47,7 @@ function _move_cursor_to_mouse() {
 	y		= y_pos						;
 }
 function _grid_cursor_input() {
-	if(_obj_ref_check(obj_col,obj_interact,obj_player_ov,obj_grid)) {
-		
+	if(_obj_ref_check(obj_col,obj_interact,obj_player_ov,obj_grid)) {	
 		if(mouse_check_button_pressed(mb_left)) {
 			if		( place_meeting(x,y,obj_col		))	{
 			
@@ -76,8 +81,11 @@ function _grid_cursor_input() {
 	}
 }
 
-/*
+#endregion
+
 //For Testing Later - Interact
+#region
+/*
 show_debug_message("Weeeee");
 			
 //Find ideal valid tile next to interactable
@@ -116,8 +124,10 @@ if(_npc != noone) {
 	obj_player.face_dir = _face_ideal;
 	contr_type			= 1;
 }
-*/
-//#endregion
+
+
 			
 //Create textbox
 //scr_create_textbox("test","this is a test. weeee. i can type anything here, huh?");
+*/
+#endregion

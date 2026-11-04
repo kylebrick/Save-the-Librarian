@@ -2,7 +2,7 @@ function scr_debug_msg(
 	_arg0 = undefined,
 	_arg1 = undefined
 ){
-	//Debug Messages List - "Weeee"
+	//Debug Messages List
 	#region
 	
 	var _arr = [

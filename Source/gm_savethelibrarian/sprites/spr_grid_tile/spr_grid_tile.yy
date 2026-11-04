@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Triggers",
-    "path":"folders/Sprites/Triggers.yy",
+    "path":"folders/Sprites/Levels/4 - Level/Triggers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

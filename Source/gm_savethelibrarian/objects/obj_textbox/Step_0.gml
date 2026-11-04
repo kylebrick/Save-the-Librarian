@@ -20,8 +20,9 @@ if	(keyboard_check_pressed(key_interact) ||
 		if(counter<str_len)	counter = str_len;	//Skip to end of line.
 		else {
 			if(!_dialogue_line_load(dialogue_line+1)) {
-				global.pl_control_ov = true;		//Return player control.
-				instance_destroy();					//Read line -> destroy.
+				global.pl_control_ov = true;						//Return player control.
+				if(is_method(dialogue_end_scr)) dialogue_end_scr();	//If detected -> run end script.
+				instance_destroy();									//Read line -> destroy.
 			}
 		}
 }

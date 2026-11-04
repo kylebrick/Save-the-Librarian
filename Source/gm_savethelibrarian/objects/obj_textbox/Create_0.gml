@@ -54,8 +54,8 @@ speakers				= [
 speakers_sep			= 48; //How far apart from textbox center to separate speakers
 
 dialogue				= [];
-dialogue_ind			= 0;
 dialogue_line			= 0;
+dialogue_end_scr		= undefined; //Are there any commands to run on dialogue finish?
 
 str_len					= 0;
 counter					= 0;

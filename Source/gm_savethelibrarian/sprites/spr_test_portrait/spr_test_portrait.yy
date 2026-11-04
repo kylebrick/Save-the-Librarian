@@ -44,8 +44,8 @@
   },
   "origin":6,
   "parent":{
-    "name":"3 - Character Select",
-    "path":"folders/Sprites/Levels/3 - Character Select.yy",
+    "name":"Testing",
+    "path":"folders/Sprites/Testing.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -21,6 +21,9 @@ global.pl_character		= noone										;
 global.pl_control_ov	= true										;
 global.pl_control_ui	= true										;
 
+global.pickup			= noone										;
+global.cursor			= obj_cursor								;
+
 global.font_main		= font_add_sprite(fnt_main,		32,true,1)	;
 global.font_default		= font_add_sprite(fnt_default,	32,true,1)	;
 
