@@ -4,7 +4,7 @@
 #region
 for(var _i=0;_i<grid_w;_i++) {
 	for(var _n=0;_n<grid_h;_n++) {
-		draw_sprite(spr_grid_tile,0,16*_i,16*_n);
+		draw_sprite(spr_tile_grid_transp,0,16*_i,16*_n);
 	}
 }
 #endregion
@@ -18,11 +18,14 @@ if(instance_exists(obj_player_ov)) {
 	var _dir		= point_direction(_px,_py,_cx,_cy);
 	var _dist		= point_distance (_px,_py,_cx,_cy);
 	
+	//DEBUG
+	draw_line_width(_px,_py,_cx,_cy,3);
+	
 	//Check for collision/gaps and calculate distance
-	if		(instance_position(_cx,_cy,obj_col) != noone) ||
-			(instance_position(_cx,_cy,obj_gap) != noone)		 valid_path = false;
-	else if	(collision_line(_px,_py,_cx,_cy,obj_col,false,true)) valid_path = false;
-	else if	(collision_line(_px,_py,_cx,_cy,obj_gap,false,true)) {
+	if		(instance_position(_cx,_cy,obj_tile_col) != noone) ||
+			(instance_position(_cx,_cy,obj_tile_gap) != noone)		 valid_path = false;
+	else if	(collision_line(_px,_py,_cx,_cy,obj_tile_col,false,true)) valid_path = false;
+	else if	(collision_line(_px,_py,_cx,_cy,obj_tile_gap,false,true)) {
 		calc_valid_path(
 			_px,_py,_cx,_cy,
 			_dir,_dist,move_dist_gap
@@ -48,22 +51,61 @@ function calc_valid_path(_px,_py,_cx,_cy,_dir,_dist,_move_dist) {
 		_ty = round(_ty/global.grid_size)*global.grid_size+(global.grid_size/2);
 		break;
 	}
+
+	//draw_line_width(_px,_py,_cx,_cy,3);	
+	
 	if	(hover_grid_x >= 0) && (hover_grid_x < grid_w) &&
 		(hover_grid_y >= 0) && (hover_grid_y < grid_h) {
 			if	(ds_grid_get(grid,hover_grid_x,hover_grid_y) == 0)	&& 
-				(instance_position(_cx,_cy,obj_col) == noone)		&&
-				(instance_position(_cx,_cy,obj_gap) == noone) {
+				(instance_position(_cx,_cy,obj_tile_col) == noone)		&&
+				(instance_position(_cx,_cy,obj_tile_gap) == noone) {
 					
 					if(_dist <= _move_dist) {draw_set_color(c_lime); valid_path = true ;}
 					if(_dist >  _move_dist) {draw_set_color(c_red ); valid_path = false;}
 					
 					draw_set_alpha(0.44);
+					
+					//DEBUG - Draw collision line array
+					//var _arr = collision_line_list(_px,_py,_cx,_cy,obj_tile_move);
+					
+					//Center
+					#region
 					draw_rectangle(
 						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
 						hover_grid_x*global.grid_size+(global.grid_size),
 						hover_grid_y*global.grid_size+(global.grid_size),
 						false
 					);
+					#endregion
+
+					//Outside
+					#region
+					draw_rectangle( //Up
+						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
+						hover_grid_x*global.grid_size+(global.grid_size),
+						hover_grid_y*global.grid_size-(global.grid_size),
+						false
+					);					
+					draw_rectangle( //Down
+						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
+						hover_grid_x*global.grid_size+(global.grid_size),
+						hover_grid_y*global.grid_size+((global.grid_size*2)),
+						false
+					);
+					draw_rectangle( //Left
+						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
+						hover_grid_x*global.grid_size-(global.grid_size),
+						hover_grid_y*global.grid_size+(global.grid_size),
+						false
+					);
+					draw_rectangle( //Right
+						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
+						hover_grid_x*global.grid_size+((global.grid_size*2)),
+						hover_grid_y*global.grid_size+(global.grid_size),
+						false
+					);
+					#endregion
+					
 					draw_set_color(c_white);
 					draw_set_alpha(1);
 				}

@@ -22,3 +22,29 @@ switch(global.pickup) {
 		break;
 	}
 }
+
+//Functions
+function play_sfx() {
+	var _pitch		= irandom_range(1,1.2);
+	var _arr_len	= array_length (pickup_snds)-1;
+	audio_play_sound(pickup_snds[irandom_range(0,_arr_len)],0,false,1,0,_pitch);
+}
+function snap_attempt() {
+	var _near_node = noone;
+	var _near_dist = snap_radius;
+	with(obj_pickup_node) {
+		if(occupant == noone) {
+			var _dist = point_distance(other.x,other.y,x,y);
+			if(_dist < _near_dist) {
+				_near_dist = _dist;
+				_near_node = id;
+			}
+		}
+	}
+	if(_near_node != noone) {
+		x_to		= _near_node.x;
+		y_to		= _near_node.y;
+		snap_node	= _near_node;
+		_near_node.occupant = id;
+	}
+}

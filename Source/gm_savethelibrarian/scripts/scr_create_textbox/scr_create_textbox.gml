@@ -1,7 +1,7 @@
 ///@desc scr_create_textbox(_speaker_l,_speaker_r,_dialogue)
 function scr_create_textbox(_speaker_l,_speaker_r,_dialogue,_callback) {
 	if(!instance_exists(obj_textbox)) && (instance_exists(global.director)) {
-		var _box = instance_create_layer(global.game_width-36,0,"Text",obj_textbox);
+		var _box = instance_create_layer(global.game_width-24,0,"Text",obj_textbox);
 		_box.speakers[0] = _speaker_l; //Left  speaker
 		_box.speakers[1] = _speaker_r; //Right speaker
 		for(var _i=0;_i<array_length(_dialogue);_i++) {

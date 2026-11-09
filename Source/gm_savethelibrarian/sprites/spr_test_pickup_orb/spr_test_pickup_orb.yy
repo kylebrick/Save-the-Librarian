@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Testing",
-    "path":"folders/Sprites/Testing.yy",
+    "name":"5 - Puzzles",
+    "path":"folders/Sprites/Levels/5 - Puzzles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

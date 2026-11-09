@@ -47,41 +47,98 @@ function _move_cursor_to_mouse() {
 	y		= y_pos						;
 }
 function _grid_cursor_input() {
-	if(_obj_ref_check(obj_col,obj_interact,obj_player_ov,obj_grid)) {	
+	if(_obj_ref_check(obj_tile_col,obj_tile_interact,obj_player_ov,obj_grid)) {	
 		if(mouse_check_button_pressed(mb_left)) {
-			if		( place_meeting(x,y,obj_col		))	{
+			/*
+				1 - Is tile a normal space? i.e. are we not touching anything -> move to space.
+				2 - Ok, we're touching a tile. What's the array of tiles in-between player and cursor (within distance).
+				3 - Determine furthest valid tile that can be moved to.
+				4 - Move to first valid tile, face direction, and...
+				5 - If interactable tile -> spawn interactable (textbox).
+			*/
 			
+			if		( place_meeting(x,y,obj_tile_col		))	{
 				//Change player's direction, but don't move into space.
 				with(obj_player_ov) {
 					var _dir = point_direction(x,y,other.x,other.y);
 					scr_change_player_facing(_dir)
 				}
+				scr_debug_msg("collision");
 			}
-			else if	(!place_meeting(x,y,obj_col		))	{
+			else if	( place_meeting(x,y,obj_tile_interact))	{
+				//Change player's direction, but don't move into space.
+				with(obj_player_ov) {
+					var _dir = point_direction(x,y,other.x,other.y);
+					scr_change_player_facing(_dir)
+				}
+				scr_debug_msg("interact");
+			}
+			else {
+				//Change player's direction...
+				with(obj_player_ov) {
+					var _dir = point_direction(x,y,other.x,other.y);
+					scr_change_player_facing(_dir)
+				}
+				scr_debug_msg("else");
 					var _pl_x	= obj_player_ov.x;
 					var _pl_y	= obj_player_ov.y;
 					var _grid_x = x div global.grid_size;
 					var _grid_y = y div global.grid_size;
+					var _cell_x = (_grid_x*global.grid_size)+(global.grid_size/2);
+					var _cell_y = (_grid_y*global.grid_size)+(global.grid_size/2);
 			
 					//Valid path? -> Place position marker.
 					if(obj_grid.valid_path) {
-						instance_create_depth(
-							(_grid_x*global.grid_size)+(global.grid_size/2),
-							(_grid_y*global.grid_size)+(global.grid_size/2),
-							obj_player_ov.depth+1,obj_position_marker
-						);
+						instance_create_depth(_cell_x,_cell_y,obj_player_ov.depth+1,obj_pos_marker);
 					}
 					else					{ //Move to the nearest valid space.
-					
+						//Check for first available space
+						var _gs		= global.grid_size;
+						var _dir	= point_direction(_pl_x,_pl_y,_cell_x,_cell_y);
+						scr_debug_msg(_dir);
+						
+						if		((_dir >= 0  )	&& (_dir <= 45 )) &&
+								((_dir <= 360) && (_dir < 315 )) { //Right
+							if	(!place_meeting(_cell_x+(_gs*2),_cell_y,obj_tile_col)) &&
+								(!place_meeting(_cell_x+(_gs*2),_cell_y,obj_tile_interact)) {
+								instance_create_depth(_cell_x+(_gs*2),_cell_y,
+								obj_player_ov.depth+1,obj_pos_marker);
+								scr_debug_msg("Right");
+							}
+						}
+						else if	(_dir > 45)		&& (_dir <= 135) { //Up
+							if	(!place_meeting(_cell_x,_cell_y-(_gs*2),obj_tile_col			)) &&
+								(!place_meeting(_cell_x,_cell_y-(_gs*2),obj_tile_interact)) {
+								instance_create_depth(_cell_x,_cell_y-(_gs*2),
+								obj_player_ov.depth+1,obj_pos_marker);
+								scr_debug_msg("Up");
+							}
+						}
+						else if	(_dir > 135)	&& (_dir <= 225) { //Left
+							if	(!place_meeting(_cell_x,_cell_y-(_gs*2),obj_tile_col			)) &&
+								(!place_meeting(_cell_x,_cell_y-(_gs*2),obj_tile_interact)) {
+								instance_create_depth(_cell_x,_cell_y-(_gs*2),
+								obj_player_ov.depth+1,obj_pos_marker);
+								scr_debug_msg("Left");
+							}							
+						}
+						else if	(_dir > 225)	&& (_dir <= 315) { //Down
+							if	(!place_meeting(_cell_x,_cell_y-(_gs*2),obj_tile_col			)) &&
+								(!place_meeting(_cell_x,_cell_y-(_gs*2),obj_tile_interact)) {
+								instance_create_depth(_cell_x,_cell_y-(_gs*2),
+								obj_player_ov.depth+1,obj_pos_marker);
+								scr_debug_msg("Down");
+							}
+						}
 					}
-			}
-			else if	( place_meeting(x,y,obj_interact))	{
 			}
 		}
 	}
 }
 
 #endregion
+
+//Functions
 
 //For Testing Later - Interact
 #region

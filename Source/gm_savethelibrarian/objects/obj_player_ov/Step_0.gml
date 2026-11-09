@@ -41,25 +41,25 @@ function move_init() {
 	var _gs			= global.grid_size;
 	
 	if(_key_up)		{face_dir = 0;
-		if(!position_meeting(x,y-_gs,obj_col)) {
+		if(!position_meeting(x,y-_gs,obj_tile_col)) {
 			y_to = y-_gs; 
 			return true;
 		}
 	}
 	if(_key_down)	{face_dir = 1;
-		if(!position_meeting(x,y+_gs,obj_col)) {
+		if(!position_meeting(x,y+_gs,obj_tile_col)) {
 			y_to = y+_gs; 
 			return true;
 		}
 	}
 	if(_key_left)	{face_dir = 2;
-		if(!position_meeting(x-_gs,y,obj_col)) {
+		if(!position_meeting(x-_gs,y,obj_tile_col)) {
 			x_to = x-_gs;
 			return true;
 		}
 	}
 	if(_key_right)	{face_dir = 3; 
-		if(!position_meeting(x+_gs,y,obj_col)) {
+		if(!position_meeting(x+_gs,y,obj_tile_col)) {
 			x_to = x+_gs;
 			return true;
 		}

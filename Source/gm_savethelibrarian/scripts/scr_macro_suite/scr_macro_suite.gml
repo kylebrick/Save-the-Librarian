@@ -47,6 +47,4 @@ function scr_macro_suite() {
 	(layer_exists("Triggers")) {
 		instance_create_layer(global.game_width-24,y,_grid_lay_id,obj_trigger_map	);
 	}
-	//if(!instance_exists(obj_cutscene))	instance_create_layer(room_width-24,y,_macro_lay_id,obj_cutscene);
-	//if(!instance_exists(obj_textbox))		instance_create_layer(room_width-36,y,_macro_lay_id,obj_textbox );
 }

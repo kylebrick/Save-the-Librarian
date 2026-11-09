@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"note_puzzles",
+  "name":"note_puzzles",
+  "parent":{
+    "name":"gm_savethelibrarian",
+    "path":"gm_savethelibrarian.yyp",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}
