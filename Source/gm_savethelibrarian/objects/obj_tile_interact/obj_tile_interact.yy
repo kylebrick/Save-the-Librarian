@@ -34,6 +34,9 @@
     "name":"spr_tile_interact",
     "path":"sprites/spr_tile_interact/spr_tile_interact.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_tile",
+    "path":"sprites/spr_tile/spr_tile.yy",
+  },
   "visible":true,
 }

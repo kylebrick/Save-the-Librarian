@@ -1,113 +1,88 @@
 ///@desc Grid & Highlight
 
-//Draw faint grid lines
-#region
-for(var _i=0;_i<grid_w;_i++) {
-	for(var _n=0;_n<grid_h;_n++) {
-		draw_sprite(spr_tile_grid_transp,0,16*_i,16*_n);
-	}
-}
-#endregion
+//Draw Faint Grid Lines
+_draw_grid_lines(grid_w,grid_h,grid_alpha);
 
-//Draw hovering tile select & determine if path is valid.
-if(instance_exists(obj_player_ov)) {
-	var _px			= obj_player_ov.x;
-	var _py			= obj_player_ov.y;
-	var _cx			= (hover_grid_x*global.grid_size)+(global.grid_size/2);
-	var _cy			= (hover_grid_y*global.grid_size)+(global.grid_size/2);
-	var _dir		= point_direction(_px,_py,_cx,_cy);
-	var _dist		= point_distance (_px,_py,_cx,_cy);
+//Capture Path -> Determine if Valid
+if(scr_obj_ref_check(
+	obj_player_ov,par_tile,
+	obj_tile_move,obj_tile_col,obj_tile_gap,
+	obj_tile_interact,obj_tile_trigger)) {
 	
-	//DEBUG
-	draw_line_width(_px,_py,_cx,_cy,3);
+	//Vars
+	#region
 	
-	//Check for collision/gaps and calculate distance
-	if		(instance_position(_cx,_cy,obj_tile_col) != noone) ||
-			(instance_position(_cx,_cy,obj_tile_gap) != noone)		 valid_path = false;
-	else if	(collision_line(_px,_py,_cx,_cy,obj_tile_col,false,true)) valid_path = false;
-	else if	(collision_line(_px,_py,_cx,_cy,obj_tile_gap,false,true)) {
-		calc_valid_path(
-			_px,_py,_cx,_cy,
-			_dir,_dist,move_dist_gap
-		);
-	}
-	else														 {
-		calc_valid_path(
-			_px,_py,_cx,_cy,
-			_dir,_dist,move_dist_floor
-		);
+	var _px		= obj_player_ov.x;
+	var _py		= obj_player_ov.y;
+	var _cx		= (hover_grid_x*global.grid_size)+(global.grid_size/2);
+	var _cy		= (hover_grid_y*global.grid_size)+(global.grid_size/2);
+	var _dir	= point_direction(_px,_py,_cx,_cy);
+	var _dist	= point_distance (_px,_py,_cx,_cy);
+	
+	#endregion
+	
+	//Debug Draw
+	var _off = 8;
+	var _wid = 1;
+	draw_set_alpha(0.25);
+	draw_rectangle_colour	(_cx-_off,_cy-_off,_cx+_off,_cy+_off,c_red,c_red,c_red,c_red,false);
+	draw_line_width_colour	(_px,_py,_cx,_cy,_wid,c_purple,c_purple);
+	draw_set_alpha(1);
+	
+	//Capture Collision List
+	var _valid_tile;
+	var _list = ds_list_create();
+	var _numb = collision_line_list(_px,_py,_cx,_cy,par_tile,true,true,_list,true);
+	if(_numb > 0) {
+		for(var _i=0;_i<_numb;_i++) {
+			
+			draw_set_color(c_white);
+			draw_set_alpha(1-(_i*0.1));
+			var _tile_id	  = -1;					  _tile_id		= (_list[| _i  ]).object_index;
+			var _prev_tile_id = -1; if(_i >= 1		) _prev_tile_id = (_list[| _i-1]).object_index;
+			var _next_tile_id = -1; if(_i < _numb-1	) _next_tile_id	= (_list[| _i+1]).object_index;
+
+			last_valid_x = -1;
+			last_valid_y = -1;
+			if (_tile_id == obj_tile_col) || (_tile_id == obj_tile_gap) 
+			|| (_tile_id == obj_tile_interact) {
+				if(_prev_tile_id != -1) {
+					if(_prev_tile_id == obj_tile_move) {
+						last_valid_x = _prev_tile_id.x;
+						last_valid_y = _prev_tile_id.y;
+					}
+				}
+			}
+			
+			//DEBUG
+			switch((_list[| _i]).object_index) {
+				case obj_tile_move:		{draw_set_color(c_lime	 ); break;}
+				case obj_tile_col:		{draw_set_color(c_red	 ); break;}
+				case obj_tile_gap:		{draw_set_color(c_fuchsia); break;}
+				case obj_tile_interact:	{draw_set_color(c_aqua	 ); break;}
+				case obj_tile_trigger:	{draw_set_color(c_yellow ); break;}
+				default:				{							break;}	
+			}
+			var _offset	= global.grid_size/2;
+			var _x		= _list[| _i].x;
+			var _y		= _list[| _i].y;
+			draw_rectangle(_x-_offset,_y-_offset,_x+_offset,_y+_offset,false);
+			draw_set_color(c_white); draw_set_alpha(1);		
+		};
 	}
 }
 
 //Functions
-function get_move_target() {
-	return [move_x,move_y];
-}
-function calc_valid_path(_px,_py,_cx,_cy,_dir,_dist,_move_dist) {
-	for(var _i=global.grid_size;_i<=_move_dist;_i+=global.grid_size) {
-		var _tx = _px + lengthdir_x(_i,_dir);
-		var _ty = _py + lengthdir_y(_i,_dir);
-		_tx = round(_tx/global.grid_size)*global.grid_size+(global.grid_size/2);
-		_ty = round(_ty/global.grid_size)*global.grid_size+(global.grid_size/2);
-		break;
+function _draw_grid_lines(_grid_w,_grid_h,_alpha) {
+	for(var _i=0;_i<_grid_w;_i++) {
+		for(var _n=0;_n<_grid_h;_n++) {
+			draw_set_alpha(_alpha);
+			draw_sprite(
+				spr_tile_grid_transp,0,
+				(16*_i)-(global.grid_size/2),
+				(16*_n)-(global.grid_size/2)
+			);
+			draw_set_alpha(1);
+		}
 	}
-
-	//draw_line_width(_px,_py,_cx,_cy,3);	
-	
-	if	(hover_grid_x >= 0) && (hover_grid_x < grid_w) &&
-		(hover_grid_y >= 0) && (hover_grid_y < grid_h) {
-			if	(ds_grid_get(grid,hover_grid_x,hover_grid_y) == 0)	&& 
-				(instance_position(_cx,_cy,obj_tile_col) == noone)		&&
-				(instance_position(_cx,_cy,obj_tile_gap) == noone) {
-					
-					if(_dist <= _move_dist) {draw_set_color(c_lime); valid_path = true ;}
-					if(_dist >  _move_dist) {draw_set_color(c_red ); valid_path = false;}
-					
-					draw_set_alpha(0.44);
-					
-					//DEBUG - Draw collision line array
-					//var _arr = collision_line_list(_px,_py,_cx,_cy,obj_tile_move);
-					
-					//Center
-					#region
-					draw_rectangle(
-						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
-						hover_grid_x*global.grid_size+(global.grid_size),
-						hover_grid_y*global.grid_size+(global.grid_size),
-						false
-					);
-					#endregion
-
-					//Outside
-					#region
-					draw_rectangle( //Up
-						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
-						hover_grid_x*global.grid_size+(global.grid_size),
-						hover_grid_y*global.grid_size-(global.grid_size),
-						false
-					);					
-					draw_rectangle( //Down
-						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
-						hover_grid_x*global.grid_size+(global.grid_size),
-						hover_grid_y*global.grid_size+((global.grid_size*2)),
-						false
-					);
-					draw_rectangle( //Left
-						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
-						hover_grid_x*global.grid_size-(global.grid_size),
-						hover_grid_y*global.grid_size+(global.grid_size),
-						false
-					);
-					draw_rectangle( //Right
-						hover_grid_x*global.grid_size,hover_grid_y*global.grid_size,
-						hover_grid_x*global.grid_size+((global.grid_size*2)),
-						hover_grid_y*global.grid_size+(global.grid_size),
-						false
-					);
-					#endregion
-					
-					draw_set_color(c_white);
-					draw_set_alpha(1);
-				}
-		}	
 }

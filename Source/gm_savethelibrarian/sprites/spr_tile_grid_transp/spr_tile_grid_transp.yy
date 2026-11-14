@@ -19,11 +19,11 @@
   "height":16,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","blendMode":0,"displayName":"default","isLocked":false,"name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","opacity":10.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","blendMode":0,"displayName":"default","isLocked":false,"name":"2799ca96-6c1d-43f2-8469-7eef9e16e3f8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tile_grid_transp",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"Triggers",
     "path":"folders/Sprites/Levels/4 - Level/Triggers.yy",
@@ -50,7 +50,7 @@
     "eventStubScript":null,
     "eventToFunction":{},
     "length":1.0,
-    "lockOrigin":false,
+    "lockOrigin":true,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
       "Keyframes":[],
@@ -75,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":8,
+    "yorigin":8,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

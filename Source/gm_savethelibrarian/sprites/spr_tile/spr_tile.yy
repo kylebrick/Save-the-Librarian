@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_tile",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":15,
   "bbox_left":0,
   "bbox_right":15,
@@ -42,7 +42,7 @@
     ],
     "top":2,
   },
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"Triggers",
     "path":"folders/Sprites/Levels/4 - Level/Triggers.yy",
@@ -69,7 +69,7 @@
     "eventStubScript":null,
     "eventToFunction":{},
     "length":1.0,
-    "lockOrigin":false,
+    "lockOrigin":true,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
       "Keyframes":[],
@@ -94,8 +94,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":8,
+    "yorigin":8,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

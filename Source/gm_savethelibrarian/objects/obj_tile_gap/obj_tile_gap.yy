@@ -34,6 +34,9 @@
     "name":"spr_tile_gap",
     "path":"sprites/spr_tile_gap/spr_tile_gap.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_tile",
+    "path":"sprites/spr_tile/spr_tile.yy",
+  },
   "visible":true,
 }

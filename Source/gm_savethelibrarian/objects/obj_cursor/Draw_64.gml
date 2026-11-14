@@ -63,7 +63,6 @@ function _state_puzzle_idle()	{
 		}
 	}
 }
-
 function _alpha_incr()			{
 	if(alpha < alpha_max) alpha += alpha_spd;
 }

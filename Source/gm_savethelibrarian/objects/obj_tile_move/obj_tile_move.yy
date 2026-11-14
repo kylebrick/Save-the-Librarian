@@ -34,6 +34,9 @@
     "name":"spr_tile_move",
     "path":"sprites/spr_tile_move/spr_tile_move.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_tile",
+    "path":"sprites/spr_tile/spr_tile.yy",
+  },
   "visible":true,
 }

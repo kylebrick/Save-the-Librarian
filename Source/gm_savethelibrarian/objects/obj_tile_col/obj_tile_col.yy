@@ -34,6 +34,9 @@
     "name":"spr_tile_col",
     "path":"sprites/spr_tile_col/spr_tile_col.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_tile",
+    "path":"sprites/spr_tile/spr_tile.yy",
+  },
   "visible":true,
 }

@@ -22,9 +22,9 @@ layer_trig	= layer_get_name		(layer_get_id("Triggers"	));
 //Tile Generation
 var _offset = global.grid_size/2;
 for(var i=0;i<room_width/global.grid_size;i++) { //Horizontal
-	var _x = i*global.grid_size;
-	if(tilemap_get_at_pixel(layer_map,_x+_offset,y+_offset) != 0) {
-		var _tile_id_h = tilemap_get_at_pixel(layer_map,_x+_offset,y+_offset);
+	var _x = (i*global.grid_size)+_offset;
+	if(tilemap_get_at_pixel(layer_map,_x,y) != 0) {
+		var _tile_id_h = tilemap_get_at_pixel(layer_map,_x,y);
 		switch(_tile_id_h) {
 			case 1:  { /*Move*/			_spawn_tile(_x,y,tiles[_tile_id_h-1],layer_move) break;}
 			case 2:  { /*Collision*/	_spawn_tile(_x,y,tiles[_tile_id_h-1],layer_col ) break;}
@@ -35,9 +35,9 @@ for(var i=0;i<room_width/global.grid_size;i++) { //Horizontal
 		}
 	}
 	for(var n=1;n<room_height/global.grid_size;n++) { //Vertical
-		var _y = n*global.grid_size;
-		if(tilemap_get_at_pixel(layer_map,_x+_offset,_y+_offset) != 0) {
-			var _tile_id_v = tilemap_get_at_pixel(layer_map,_x+_offset,_y+_offset);
+		var _y = (n*global.grid_size)+_offset;
+		if(tilemap_get_at_pixel(layer_map,_x,_y) != 0) {
+			var _tile_id_v = tilemap_get_at_pixel(layer_map,_x,_y);
 			switch(_tile_id_v) {
 				case 1:  { /*Move*/			_spawn_tile(_x,_y,tiles[_tile_id_v-1],layer_move)	break;}
 				case 2:  { /*Collision*/	_spawn_tile(_x,_y,tiles[_tile_id_v-1],layer_col)	break;}

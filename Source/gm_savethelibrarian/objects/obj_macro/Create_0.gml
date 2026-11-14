@@ -34,4 +34,4 @@ scr_macro_suite()													;
 randomise()															;
 
 //Move to Next Room if Available
-if(room == rm_000_startup) room_goto_next()							;
+if(room == rm_000_startup) room_goto(rm_004_level)					;

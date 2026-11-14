@@ -37,6 +37,9 @@
     "name":"spr_tile_trigger",
     "path":"sprites/spr_tile_trigger/spr_tile_trigger.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_tile",
+    "path":"sprites/spr_tile/spr_tile.yy",
+  },
   "visible":true,
 }
