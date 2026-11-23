@@ -8,8 +8,8 @@
   "name":"obj_main_menu_button_options",
   "overriddenProperties":[],
   "parent":{
-    "name":"1 - Main Menu",
-    "path":"folders/Objects/Levels/1 - Main Menu.yy",
+    "name":"Buttons",
+    "path":"folders/Objects/Levels/1 - Main Menu/Buttons.yy",
   },
   "parentObjectId":{
     "name":"par_main_menu_button",

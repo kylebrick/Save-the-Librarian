@@ -1,6 +1,27 @@
 /// @desc Places, Please!
 
 switch(room) {
+	case rm_000_startup: {
+		
+		//Transition Once Loaded
+		with(obj_maestro) {
+			if	(audio_group_is_loaded(audiogroup_music)) &&
+				(audio_group_is_loaded(audiogroup_sfx)) {
+					room_goto(rm_001_main_menu);
+					break;
+			}
+		}
+		break;
+	}
+	case rm_001_main_menu: {
+		
+		//Room Music
+		with(obj_maestro) {
+			if(audio_group_is_loaded(aud_group_music)) {
+				if(!audio_is_playing(mus_main_menu)) audio_play_sound(mus_main_menu,0,true);
+			}
+		}		
+	}
 	case rm_004_level: {
 		
 		//Cursor Init Position

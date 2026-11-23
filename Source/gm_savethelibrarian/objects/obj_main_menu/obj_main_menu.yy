@@ -10,8 +10,8 @@
   "name":"obj_main_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"1 - Main Menu",
-    "path":"folders/Objects/Levels/1 - Main Menu.yy",
+    "name":"Title",
+    "path":"folders/Objects/Levels/1 - Main Menu/Title.yy",
   },
   "parentObjectId":null,
   "persistent":false,
