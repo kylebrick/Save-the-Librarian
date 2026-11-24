@@ -10,6 +10,7 @@ switch(room) {
 					room_goto(rm_001_main_menu);
 					break;
 			}
+			else room_goto(rm_001_main_menu); //Debug
 		}
 		break;
 	}

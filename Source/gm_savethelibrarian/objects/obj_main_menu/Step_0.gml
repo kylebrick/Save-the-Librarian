@@ -62,6 +62,10 @@ switch(state) {
 			var _libr_a_	= instance_create_layer(x-_x_off+(_txt_sep*8),y+_y_off,"UI",obj_main_menu_title); with(_libr_a_){image_index = 14; alarm[0] = global.game_spd*(other.anim_float_delay+(sine_sep*2.4));}
 			var _libr_n		= instance_create_layer(x-_x_off+(_txt_sep*9),y+_y_off,"UI",obj_main_menu_title); with(_libr_n)	{image_index = 15; alarm[0] = global.game_spd*(other.anim_float_delay+(sine_sep*2.5));}
 			
+			//!
+			var _ex			= instance_create_layer(x-_x_off+(_txt_sep*10),y+_y_off,"UI",obj_main_menu_title); with(_ex)	{image_index = 16; alarm[0] = global.game_spd*(other.anim_float_delay+(sine_sep*2.6));}
+			
+			
 			//Menu
 			var _del = 1;
 			with(obj_main_menu_button_start)	alarm[0] = global.game_spd*_del;
